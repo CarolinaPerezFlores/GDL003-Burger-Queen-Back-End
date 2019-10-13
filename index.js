@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 require('dotenv').config();
 require('./routes/order.routes')(app);
+require('./routes/products.routes')(app);
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
