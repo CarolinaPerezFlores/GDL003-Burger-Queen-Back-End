@@ -4,8 +4,9 @@
   "description": "Tu equipo del Open House necesita un Back-end para almacenar y manejar la data de la aplicación.",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon /index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon /index.js"
+    
   },
   "repository": {
     "type": "git",
