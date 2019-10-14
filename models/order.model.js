@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 
 const OrderSchema = mongoose.Schema({
-    order: String,
-    content: String
+    table: String,
+    content: Array,
+    total: Number
 }, {
     timestamps: true
 });

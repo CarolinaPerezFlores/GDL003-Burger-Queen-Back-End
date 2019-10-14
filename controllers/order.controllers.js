@@ -11,8 +11,9 @@ exports.create = (req, res) => {
 
     // Create a Order
     const order = new Order({
-        order: req.body.order || "Untitled Order", 
-        content: req.body.content
+        table: req.body.table || "Untitled table", 
+        content: req.body.content || "Untitled content", 
+        total: req.body.total || "Untitled total" 
     });
 
     // Save Order in the database
@@ -80,8 +81,9 @@ exports.update = (req, res) => {
 
     // Find order and update it with the request body
     Order.findByIdAndUpdate(req.params.orderId, {
-        order: req.body.order || "Untitled Order",
-        content: req.body.content
+        table: req.body.table || "Untitled table", 
+        content: req.body.content || "Untitled content", 
+        total: req.body.total || "Untitled total" 
     }, {new: true})
     .then(order => {
         if(!order) {
