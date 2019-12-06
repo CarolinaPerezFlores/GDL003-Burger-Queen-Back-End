@@ -2,11 +2,15 @@ const express= require('express');
 const app = express();
 const mongoose = require('mongoose');
 require('dotenv').config();
-require('./routes/order.routes')(app);
-require('./routes/products.routes')(app);
+
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
+
+require('./routes/orders.routes')(app);
+require('./routes/products.routes')(app);
+
+
 
 async function init() {
     await app.listen(process.env.PORT || 3000);
